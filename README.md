@@ -26,8 +26,8 @@ curl -sSL https://raw.githubusercontent.com/survon/survon-runtime-council-seat/m
 
 1. Download the latest binary:
 ```bash
-curl -L https://github.com/survon/survon-runtime-council-seat/releases/latest/download/survon-council-seat -o /usr/local/bin/survon-council-seat
-chmod +x /usr/local/bin/survon-council-seat
+curl -L https://github.com/survon/survon-runtime-council-seat/releases/latest/download/survon-runtime-council-seat -o /usr/local/bin/survon-runtime-council-seat
+chmod +x /usr/local/bin/survon-runtime-council-seat
 ```
 
 2. Set environment variables:
@@ -39,7 +39,7 @@ export LOG_LEVEL=info
 
 3. Run:
 ```bash
-./survon-council-seat
+./survon-runtime-council-seat
 ```
 
 ## Configuration
@@ -73,19 +73,19 @@ To run multiple council members (e.g., on different Raspberry Pis):
 **Pi 1:**
 ```bash
 export COUNCIL_STRATEGY=librarian
-./survon-council-seat
+./survon-runtime-council-seat
 ```
 
 **Pi 2:**
 ```bash
 export COUNCIL_STRATEGY=medicine
-./survon-council-seat
+./survon-runtime-council-seat
 ```
 
 **Pi 3:**
 ```bash
 export COUNCIL_STRATEGY=botany
-./survon-council-seat
+./survon-runtime-council-seat
 ```
 
 ## Survon OS Integration

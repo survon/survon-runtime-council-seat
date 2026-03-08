@@ -6,8 +6,9 @@
 set -e
 
 INSTALLER_VERSION="0.1.0"
-BINARY_URL="https://github.com/survon/survon-runtime-council-seat/releases/latest/download/survon-council-seat"
+BINARY_URL="https://github.com/survon/survon-runtime-council-seat/releases/latest/download/survon-runtime-council-seat"
 INSTALL_DIR="/usr/local/bin"
+BINARY_NAME="survon-runtime-council-seat"
 DATA_DIR="/home/survon/data"
 
 # Parse arguments
@@ -51,7 +52,7 @@ mkdir -p "$DATA_DIR"
 if [ $SKIP_INSTALL -eq 0 ]; then
     # Download binary
     echo "Downloading council seat binary..."
-    curl -L "$BINARY_URL" -o /tmp/survon-council-seat
+    curl -L "$BINARY_URL" -o /tmp/$BINARY_NAME
     
     if [ $? -ne 0 ]; then
         echo "Error: Failed to download binary"
@@ -60,8 +61,8 @@ if [ $SKIP_INSTALL -eq 0 ]; then
     
     # Install binary
     echo "Installing binary..."
-    sudo mv /tmp/survon-council-seat "$INSTALL_DIR/survon-council-seat"
-    sudo chmod +x "$INSTALL_DIR/survon-council-seat"
+    sudo mv /tmp/$BINARY_NAME "$INSTALL_DIR/$BINARY_NAME"
+    sudo chmod +x "$INSTALL_DIR/$BINARY_NAME"
     
     echo "Binary installed successfully"
 fi
@@ -82,11 +83,11 @@ echo "=========================================="
 echo "Installation Complete!"
 echo "=========================================="
 echo "Strategy: $STRATEGY"
-echo "Binary: $INSTALL_DIR/survon-council-seat"
+echo "Binary: $INSTALL_DIR/$BINARY_NAME"
 echo "Data: $DATA_DIR"
 echo ""
 echo "To start the council seat:"
-echo "  $INSTALL_DIR/survon-council-seat"
+echo "  $INSTALL_DIR/$BINARY_NAME"
 echo ""
 echo "To change strategy later, edit ~/.bashrc or run:"
 echo "  export COUNCIL_STRATEGY=<strategy>"
