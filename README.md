@@ -19,14 +19,14 @@ A configurable council member seat that provides domain-specific expertise to th
 ### Quick Install (Raspberry Pi)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/survon/survon-council-seat/master/scripts/install.sh | bash -s -- --strategy librarian
+curl -sSL https://raw.githubusercontent.com/survon/survon-runtime-council-seat/master/scripts/install.sh | bash -s -- --strategy librarian
 ```
 
 ### Manual Install
 
 1. Download the latest binary:
 ```bash
-curl -L https://github.com/survon/survon-council-seat/releases/latest/download/survon-council-seat -o /usr/local/bin/survon-council-seat
+curl -L https://github.com/survon/survon-runtime-council-seat/releases/latest/download/survon-council-seat -o /usr/local/bin/survon-council-seat
 chmod +x /usr/local/bin/survon-council-seat
 ```
 

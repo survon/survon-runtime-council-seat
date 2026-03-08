@@ -6,7 +6,7 @@
 set -e
 
 INSTALLER_VERSION="0.1.0"
-BINARY_URL="https://github.com/survon/survon-council-seat/releases/latest/download/survon-council-seat"
+BINARY_URL="https://github.com/survon/survon-runtime-council-seat/releases/latest/download/survon-council-seat"
 INSTALL_DIR="/usr/local/bin"
 DATA_DIR="/home/survon/data"
 
